@@ -26,19 +26,12 @@
     rightViewController.view.backgroundColor = [UIColor blueColor];
 
     UINavigationController *navViewcController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
-    
-//    [mainViewController addLeftBarButtonWithImage:[UIImage imageNamed:@"ic_menu_black_24dp"]];
-//    [mainViewController addRightBarButtonWithImage:[UIImage imageNamed:@"ic_notifications_black_24dp"]];
-//    [mainViewController.getSlideMenuController removeLeftGestures];
-//    [mainViewController.getSlideMenuController removeRightGestures];
-//    
     SlideMenuController *slideMenuController = [[SlideMenuController alloc] initWithMainViewController:navViewcController andLeftController:leftViewController andRightController:rightViewController];
     
     self.window.backgroundColor = [UIColor colorWithRed:236.0 green:238.0 blue:241.0 alpha:1.0];
     self.window.rootViewController = slideMenuController;
     [self.window makeKeyAndVisible];
 }
-
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
